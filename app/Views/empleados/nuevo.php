@@ -5,7 +5,7 @@
 <br>
 <a href="<?php echo base_url('empleados/'); ?>"  class="btn btn-success">regresar</a>
 <!-- b-form-enctype -->
-<form method="post" action="<?php echo base_url('/empleados/guardar/'); ?>" enctype="multipart/form-data">
+<form method="post" action="<?php echo base_url('/empleados/guardar'); ?>" enctype="multipart/form-data">
 <!-- b-card-header -->    
 <div class="card">
         <div class="card-header">
