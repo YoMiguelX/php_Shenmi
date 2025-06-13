@@ -8,6 +8,16 @@ class Empleados extends BaseController
 {
 public function index()
 {
+    //comprobar si esta logueado
+    if(!session()->has('usuario'))
+    {
+return redirect()->to('/login');
+    }
+    //comprobar si el usuario es un admin (id=1)
+    if (session('perfil')!=1)
+    {
+        return redirect()->to('/login');
+    }
     $model = new EmpleadosModel();
     $data['empleados'] = $model->findAll();
 return view('empleados/index',$data);
@@ -45,5 +55,23 @@ public function eliminar($id)
     $model->delete($id);
     return redirect()->to('/empleados');
 }
+public function secretaria()
+{
+    if (!session()->has('usuario') || session('perfil')!=2)
+    {
+        return redirect()->to('/login');
+    }
+    return view('paginas/secretaria');
 }
+public function vendedor()
+{
+    
+    if (!session()->has('usuario') || session('perfil')!=3)
+    {
+        return redirect()->to('/login');
+    }
+    return view('paginas/vendedor');
+}
+}
+
 ?>
