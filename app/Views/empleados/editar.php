@@ -4,7 +4,7 @@
 <h2>editar empleado</h2>
 <br>
 <!-- b-form-enctype -->
-<form method="post" action="<?php echo base_url('/empleados/actualizar/'.$empleado['ced_empleado']); ?>" enctype="multipart/form-data">
+<form method="post" action="<?php echo base_url('/empleados/actualizar'.$empleado['ced_empleado']); ?>" enctype="multipart/form-data">
 <div class="card">
         <div class="card-header">
            editar empleado
