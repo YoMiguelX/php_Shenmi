@@ -18,8 +18,8 @@ $routes->get('/empleados/editar/(:num)','Empleados::actualizar/$1');
 $routes->get('/empleados/eliminar/(:num)','Empleados::eliminar/$1');
 $routes->post('/empleados/actualizar/(:num)', 'Empleados::actualizar/$1');
 
-$routes->post('/login/acceder', 'Login::acceder');
 
+$routes->post('/login/acceder', 'Login::acceder');
 $routes->get('/login', 'Login::index');
 $routes->get('/secretaria', 'Empleados::secretaria');
 $routes->get('/vendedor', 'Empleados::vendedor');

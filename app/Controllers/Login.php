@@ -9,7 +9,7 @@ class Login extends BaseController
     }
   public function acceder()
   {
-    $usuario = $this->request->getPost('usuario');
+    $usuario = $this->request->getPost('nombre_usu');
     $password = $this->request->getPost('password');
 
     $model = new UsuarioModel();
